@@ -1,5 +1,5 @@
 #Brian Ross Lab 2 CSC 201
-memory = []
+memory = [] #empty list to store the results of the user's input
 while(True): #loop to automatically repeat the program
     k = input("Please enter an expression of the form ( number +/-* number ): ")#asks the user for the expression to be calculated
     para_arg1 = int(k.find("(")) #finds the index of the "(" sign
@@ -65,17 +65,17 @@ while(True): #loop to automatically repeat the program
         else:
             print("Does not compute") #if the user doesn't input a usable expression the program will return "Does not compute"
         
-    inputs = input("would you like to see previous inputs? (Press Y/N) ")
-    inputs = inputs.upper()
+    inputs = input("would you like to see previous inputs? (Press Y/N) ") #prompts the user if they want to see their previous strings
+    inputs = inputs.upper() #changes any lowercase input to uppercase
     
-    if inputs == "Y" :
-        list_number = int(input("How many? Please enter a number "))
+    if inputs == "Y" : #if the user inputs a y then this if statement will proceed. Otherwise the program will print a blank line
+        list_number = int(input("How many? Please enter a number ")) #the user inputs a number from which the program prints the values from the end of the list to that number 
         print(memory[-list_number:])
     else:
-        print("\n")
+        print("\n") 
 
-    user_input = input("End? Y/N?")
+    user_input = input("End? Y/N?") #whether the program continues with the while loop or ends
     user_input = user_input.upper()
-    if user_input == "Y" :
+    if user_input == "Y" : # if the user inputs a "y" the program ends
         break
 
